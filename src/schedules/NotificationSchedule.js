@@ -2,4 +2,5 @@ import cron from 'node-cron';
 import CronConstants from '../constants/CronConstants';
 import NotificationService from '../services/NotificationService';
 
-cron.schedule(CronConstants.ONCE_PER_WEEK, () => NotificationService.notificateUsers)
+cron.schedule(CronConstants.ONCE_PER_WEEK, () => NotificationService.notifyUsersNotFinished);
+cron.schedule(CronConstants.ONCE_PER_WEEK, () => NotificationService.notifyUsersExpired);
