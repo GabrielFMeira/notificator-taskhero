@@ -19,12 +19,15 @@ export default class NotificationService {
     }
 
     static async notifyUsersExpired() {
-        //TODO verificar se a query não precisa de uma alteração para validar se o expirado não foi notificado já
         const usersToNotificate = repository.findUserToNotificateByStatus([
             'EXPIRADO'
         ]);
 
         this.notify(usersToNotificate, 'TarefaPendenteTemplate.html');
+
+        usersToNotificate.forEach(user => {
+            repository.markUserExpiredMetasAsNotified(user.id);
+        });
     }
 
     static notify(usersToNotificate, template) {
@@ -35,7 +38,7 @@ export default class NotificationService {
         emailsToNotificate.forEach(email => {
             const __dirname = path.resolve();
 
-            const templatePath = path.join(__dirname, '..', 'assets', 'templates', template);
+            const templatePath = path.join(__dirname, 'assets', 'templates', template);
             const htmlTemplate = fs.readFileSync(templatePath, 'utf-8');
 
             emailService.sendMail(

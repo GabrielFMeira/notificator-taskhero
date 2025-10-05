@@ -1,14 +1,16 @@
 import nodemailer from 'nodemailer';
+import dotenv from 'dotenv';
 
+dotenv.config();
 const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 587, 
     secure: false,
     auth: {
-        user: "seuemail@provedor.com",
-        pass: ""
+        user: process.env.APP_TASKHERO_EMAIL_ADRESS,
+        pass: process.env.APP_TASKHERO_EMAIL_PASSWORD
     },
-})
+});
 
 export default class EmailService {
     async sendMail(destinyAdress, subject, template) {
@@ -25,7 +27,7 @@ export default class EmailService {
 
     #createMailOptions(destinyAdress, subject, template) {
         return {
-            from: '"Taskhero" <seuemail@provedor.com>',
+            from: `"Taskhero" ${process.env.APP_TASKHERO_EMAIL_ADRESS}`,
             to: destinyAdress,
             subject: subject,
             html: template

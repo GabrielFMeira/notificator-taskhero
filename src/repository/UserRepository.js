@@ -8,6 +8,7 @@ export default class UserRepository {
             from usuarios u
             inner join metas m on u.id = m.usuario_id
             where m.status in (:status)
+            and m.notificado_expiracao is false
             `,
             {
                 replacements: {status: status},
@@ -15,8 +16,20 @@ export default class UserRepository {
             }
         );
 
-        console.log(results);
-
         return results;
+    }
+
+    async markUserExpiredMetasAsNotified(userId) {
+        await seq.query(
+            `
+            update metas m
+            set notificado_expiracao = true
+            where m.usuario_id = :userId
+            `,
+            {
+                replacements: {userId: userId},
+                type: seq.QueryTypes.UPDATE
+            }
+        );
     }
 }
