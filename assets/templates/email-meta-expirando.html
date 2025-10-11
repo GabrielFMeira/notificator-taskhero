@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="x-apple-disable-message-reformatting">
+    <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no">
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
+    <title>TaskHero - Meta Prestes a Expirar</title>
+    
+    <!--[if mso]>
+    <noscript>
+        <xml>
+            <o:OfficeDocumentSettings>
+                <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
+    </noscript>
+    <![endif]-->
+    
+    <style>
+        /* Reset básico para clientes de email */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body, table, td, p, a, li {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        
+        table, td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+        
+        img {
+            -ms-interpolation-mode: bicubic;
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+        }
+        
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+            min-width: 100% !important;
+            background-color: #F9F9FB;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+        
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #FF7A00 0%, #FF9E44 100%);
+            padding: 32px 24px;
+            text-align: center;
+        }
+        
+        .logo-text {
+            color: #FFFFFF;
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .tagline {
+            color: #FFFFFF;
+            font-size: 14px;
+            margin: 8px 0 0 0;
+            opacity: 0.95;
+        }
+        
+        .content {
+            background-color: #FFFFFF;
+            padding: 40px 32px;
+        }
+        
+        .greeting {
+            color: #1C1C1C;
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0 0 20px 0;
+        }
+        
+        .message {
+            color: #5A5A5A;
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 0 0 24px 0;
+        }
+        
+        .goal-card {
+            background-color: #F9F9FB;
+            border-left: 4px solid #FF7A00;
+            border-radius: 8px;
+            padding: 24px;
+            margin: 24px 0;
+        }
+        
+        .goal-title {
+            color: #1C1C1C;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0 0 12px 0;
+        }
+        
+        .goal-description {
+            color: #5A5A5A;
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 0 0 16px 0;
+        }
+        
+        .stat-row {
+            margin-bottom: 12px;
+        }
+        
+        .stat-label {
+            color: #5A5A5A;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        
+        .stat-value {
+            color: #1C1C1C;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .stat-value.warning {
+            color: #ffaa00;
+        }
+        
+        .progress-container {
+            background-color: #E0E0E0;
+            border-radius: 8px;
+            height: 12px;
+            margin: 16px 0;
+            overflow: hidden;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            border-radius: 8px;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background-color: #FFF3E0;
+            color: #F57C00;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #7B2CBF 0%, #9D4EDD 100%);
+            border-radius: 8px;
+            color: #FFFFFF !important;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            margin: 24px 0;
+            box-shadow: 0 4px 12px rgba(123, 44, 191, 0.3);
+        }
+        
+        .tips-section {
+            background-color: #F3E5FF;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 24px 0;
+        }
+        
+        .tips-title {
+            color: #7B2CBF;
+            font-size: 16px;
+            font-weight: 700;
+            margin: 0 0 12px 0;
+        }
+        
+        .tip-item {
+            color: #5A5A5A;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .tip-item:before {
+            content: "💡";
+            position: absolute;
+            left: 0;
+        }
+        
+        .footer {
+            background-color: #1E1E1E;
+            color: #B5B5B5;
+            padding: 32px 24px;
+            text-align: center;
+        }
+        
+        .footer-text {
+            font-size: 13px;
+            line-height: 1.6;
+            margin: 0 0 16px 0;
+        }
+        
+        .footer-links {
+            margin: 16px 0;
+        }
+        
+        .footer-link {
+            color: #FF9E44;
+            text-decoration: none;
+            margin: 0 12px;
+            font-size: 13px;
+        }
+        
+        .social-links {
+            margin: 20px 0 0 0;
+        }
+        
+        .social-link {
+            display: inline-block;
+            margin: 0 8px;
+            color: #B5B5B5;
+            text-decoration: none;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            .content {
+                padding: 24px 20px !important;
+            }
+            
+            .goal-card {
+                padding: 20px !important;
+            }
+            
+            .cta-button {
+                display: block !important;
+                width: 100% !important;
+            }
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            .content {
+                background-color: #1E1E1E !important;
+            }
+            
+            .greeting,
+            .goal-title {
+                color: #EAEAEA !important;
+            }
+            
+            .message,
+            .goal-description,
+            .stat-label {
+                color: #B5B5B5 !important;
+            }
+            
+            .stat-value {
+                color: #EAEAEA !important;
+            }
+            
+            .goal-card {
+                background-color: #2A2A2A !important;
+            }
+            
+            .tips-section {
+                background-color: #2A2A2A !important;
+            }
+        }
+    </style>
+</head>
+
+<body style="margin: 0; padding: 0; background-color: #F9F9FB;">
+    <div style="display: none; max-height: 0; overflow: hidden;">
+        Sua meta "{{GOAL_TITLE}}" está prestes a expirar! Ainda dá tempo de completar.
+    </div>
+    
+    <center style="width: 100%; background-color: #F9F9FB; padding: 20px 0;">
+        <table role="presentation" class="email-container" cellspacing="0" cellpadding="0" border="0" width="600" style="margin: 0 auto; max-width: 600px; width: 100%;">
+            
+            <!-- HEADER -->
+            <tr>
+                <td class="header" style="background: linear-gradient(135deg, #FF7A00 0%, #FF9E44 100%); padding: 32px 24px; text-align: center;">
+                    <h1 class="logo-text" style="color: #FFFFFF; font-size: 28px; font-weight: 700; margin: 0;">
+                        🎯 TaskHero
+                    </h1>
+                    <p class="tagline" style="color: #FFFFFF; font-size: 14px; margin: 8px 0 0 0; opacity: 0.95;">
+                        Transforme suas metas em conquistas
+                    </p>
+                </td>
+            </tr>
+            
+            <!-- CONTEÚDO -->
+            <tr>
+                <td class="content" style="background-color: #FFFFFF; padding: 40px 32px;">
+                    
+                    <p class="greeting" style="color: #1C1C1C; font-size: 18px; font-weight: 600; margin: 0 0 20px 0;">
+                        Olá, {{USER_NAME}}! 👋
+                    </p>
+                    
+                    <p class="message" style="color: #5A5A5A; font-size: 16px; line-height: 1.6; margin: 0 0 24px 0;">
+                        Sua meta está <strong style="color: #FF7A00;">prestes a expirar</strong>! ⏰
+                        <br><br>
+                        Não deixe todo o seu esforço ir por água abaixo. Ainda dá tempo de concluir e garantir os <strong>100 pontos</strong>! 💪
+                    </p>
+                    
+                    <!-- Card da Meta -->
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                            <td class="goal-card" style="background-color: #F9F9FB; border-left: 4px solid #FF7A00; border-radius: 8px; padding: 24px;">
+                                
+                                <div style="margin-bottom: 16px;">
+                                    <span class="status-badge" style="display: inline-block; padding: 6px 12px; border-radius: 12px; font-size: 12px; font-weight: 600; background-color: #FFF3E0; color: #F57C00;">
+                                        ⏰ URGENTE
+                                    </span>
+                                </div>
+                                
+                                <h2 class="goal-title" style="color: #1C1C1C; font-size: 20px; font-weight: 700; margin: 0 0 12px 0;">
+                                    {{GOAL_TITLE}}
+                                </h2>
+                                
+                                <p class="goal-description" style="color: #5A5A5A; font-size: 14px; line-height: 1.5; margin: 0 0 16px 0;">
+                                    {{GOAL_DESCRIPTION}}
+                                </p>
+                                
+                                <!-- Barra de Progresso -->
+                                <div class="progress-container" style="background-color: #E0E0E0; border-radius: 8px; height: 12px; margin: 16px 0; overflow: hidden;">
+                                    <div class="progress-bar" style="height: 100%; border-radius: 8px; width: {{PROGRESS_PERCENT}}%; background: linear-gradient(90deg, {{PROGRESS_COLOR_START}} 0%, {{PROGRESS_COLOR_END}} 100%);">
+                                    </div>
+                                </div>
+                                
+                                <!-- Estatísticas -->
+                                <div style="margin: 16px 0 0 0;">
+                                    <div class="stat-row" style="margin-bottom: 12px;">
+                                        <span class="stat-label" style="color: #5A5A5A; font-size: 13px; font-weight: 500;">📊 Progresso:</span>
+                                        <span class="stat-value" style="color: #1C1C1C; font-size: 14px; font-weight: 600;"> {{COMPLETED_TASKS}} de {{TOTAL_TASKS}} tarefas ({{PROGRESS_PERCENT}}%)</span>
+                                    </div>
+                                    
+                                    <div class="stat-row" style="margin-bottom: 12px;">
+                                        <span class="stat-label" style="color: #5A5A5A; font-size: 13px; font-weight: 500;">📅 Prazo final:</span>
+                                        <span class="stat-value warning" style="color: #ffaa00; font-size: 14px; font-weight: 600;"> {{END_DATE}}</span>
+                                    </div>
+                                    
+                                    <div class="stat-row" style="margin-bottom: 12px;">
+                                        <span class="stat-label" style="color: #5A5A5A; font-size: 13px; font-weight: 500;">⏳ Tempo restante:</span>
+                                        <span class="stat-value warning" style="color: #ffaa00; font-size: 14px; font-weight: 600;"> {{DAYS_REMAINING}}</span>
+                                    </div>
+                                    
+                                    <div class="stat-row">
+                                        <span class="stat-label" style="color: #5A5A5A; font-size: 13px; font-weight: 500;">🏆 Recompensa:</span>
+                                        <span class="stat-value" style="color: #4caf50; font-size: 14px; font-weight: 600;"> 100 pontos + XP</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <!-- CTA -->
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                            <td align="center" style="padding: 24px 0;">
+                                <a href="{{APP_DEEP_LINK}}" class="cta-button" style="background: linear-gradient(135deg, #7B2CBF 0%, #9D4EDD 100%); border-radius: 8px; color: #FFFFFF; display: inline-block; font-size: 16px; font-weight: 600; padding: 16px 32px; text-decoration: none; box-shadow: 0 4px 12px rgba(123, 44, 191, 0.3);">
+                                    🚀 Concluir Tarefas Agora
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <!-- Dicas -->
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                            <td class="tips-section" style="background-color: #F3E5FF; border-radius: 8px; padding: 20px;">
+                                <h3 class="tips-title" style="color: #7B2CBF; font-size: 16px; font-weight: 700; margin: 0 0 12px 0;">
+                                    🚀 Dicas para terminar a tempo
+                                </h3>
+                                
+                                <div class="tip-item" style="color: #5A5A5A; font-size: 14px; line-height: 1.6; margin: 8px 0; padding-left: 20px; position: relative;">
+                                    Foque nas tarefas mais importantes primeiro
+                                </div>
+                                <div class="tip-item" style="color: #5A5A5A; font-size: 14px; line-height: 1.6; margin: 8px 0; padding-left: 20px; position: relative;">
+                                    Reserve tempo específico hoje para trabalhar na meta
+                                </div>
+                                <div class="tip-item" style="color: #5A5A5A; font-size: 14px; line-height: 1.6; margin: 8px 0; padding-left: 20px; position: relative;">
+                                    Divida tarefas grandes em subtarefas menores
+                                </div>
+                                <div class="tip-item" style="color: #5A5A5A; font-size: 14px; line-height: 1.6; margin: 8px 0; padding-left: 20px; position: relative;">
+                                    Peça ajuda se necessário - você não está sozinho!
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <p class="message" style="color: #5A5A5A; font-size: 16px; line-height: 1.6; margin: 24px 0 0 0;">
+                        Continue firme na sua jornada! 💪
+                        <br><br>
+                        Equipe TaskHero
+                    </p>
+                </td>
+            </tr>
+            
+            <!-- FOOTER -->
+            <tr>
+                <td class="footer" style="background-color: #1E1E1E; color: #B5B5B5; padding: 32px 24px; text-align: center;">
+                    <p class="footer-text" style="font-size: 13px; line-height: 1.6; margin: 0 0 16px 0;">
+                        Você está recebendo este email porque ativou notificações de prazo no TaskHero.
+                    </p>
+                    
+                    <div class="footer-links" style="margin: 16px 0;">
+                        <a href="{{SETTINGS_LINK}}" class="footer-link" style="color: #FF9E44; text-decoration: none; margin: 0 12px; font-size: 13px;">Configurações</a>
+                        <a href="{{HELP_LINK}}" class="footer-link" style="color: #FF9E44; text-decoration: none; margin: 0 12px; font-size: 13px;">Ajuda</a>
+                        <a href="{{UNSUBSCRIBE_LINK}}" class="footer-link" style="color: #FF9E44; text-decoration: none; margin: 0 12px; font-size: 13px;">Desativar notificações</a>
+                    </div>
+                    
+                    <p class="footer-text" style="font-size: 13px; line-height: 1.6; margin: 16px 0 0 0;">
+                        © 2025 TaskHero. Todos os direitos reservados.
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>

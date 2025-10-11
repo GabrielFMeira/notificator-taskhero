@@ -15,7 +15,7 @@ export default class NotificationService {
             'EM_ANDAMENTO'
         ]);
 
-        this.notify(usersToNotificate, 'TarefaPendenteTemplate.html');
+        this.notify(usersToNotificate, 'email-meta-expirando.html');
     }
 
     static async notifyUsersExpired() {
@@ -23,7 +23,7 @@ export default class NotificationService {
             'EXPIRADO'
         ]);
 
-        this.notify(usersToNotificate, 'TarefaPendenteTemplate.html');
+        this.notify(usersToNotificate, 'email-meta-expirada.html');
 
         usersToNotificate.forEach(user => {
             repository.markUserExpiredMetasAsNotified(user.id);
