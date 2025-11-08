@@ -1,3 +1,5 @@
+import ObjectUtils from "./ObjectUtils.js";
+
 export default class TemplateUtils {
     static preencherTemplate(template, data) {
         return template.replace(/{{(.*?)}}/g, (match, chave) => {
@@ -14,8 +16,9 @@ export default class TemplateUtils {
             COMPLETED_TASKS: user.completed_tasks,
             TOTAL_TASKS: user.total_tasks,
             PROGRESS_PERCENT: user.progress_percent,
-            END_DATE: user.data_fim,
-            DAYS_EXPIRED: user.dias_expirados
+            END_DATE: ObjectUtils.formateDate(user.data_fim),
+            DAYS_EXPIRED: user.dias_expirados,
+            DAYS_REMAINING: `${user.tempo_restante} dias`
         }
     }
 }

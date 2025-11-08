@@ -18,7 +18,8 @@ export default class UserRepository {
                     2
                 ) AS progress_percent,
                 m.data_fim as data_fim,
-                GREATEST(0, CURRENT_DATE - m.data_fim::date) as dias_expirados
+                GREATEST(0, CURRENT_DATE - m.data_fim::date) as dias_expirados,
+                GREATEST(0, m.data_fim::date - CURRENT_DATE) as tempo_restante
             FROM usuarios u
             INNER JOIN metas m ON u.id = m.usuario_id
             LEFT JOIN tarefas t ON m.id = t.meta_id
