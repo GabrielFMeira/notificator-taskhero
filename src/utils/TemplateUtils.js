@@ -17,7 +17,7 @@ export default class TemplateUtils {
             TOTAL_TASKS: user.total_tasks,
             PROGRESS_PERCENT: user.progress_percent,
             END_DATE: ObjectUtils.formateDate(user.data_fim),
-            DAYS_EXPIRED: user.dias_expirados,
+            DAYS_EXPIRED: `${user.dias_expirados} dias`,
             DAYS_REMAINING: `${user.tempo_restante} dias`
         }
     }
