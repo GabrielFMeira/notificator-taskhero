@@ -1,6 +1,6 @@
-import UserRepository from "../repository/UserRepository";
-import ObjectUtils from "../utils/ObjectUtils";
-import EmailService from "./EmailService";
+import UserRepository from "../repository/UserRepository.js";
+import TemplateUtils from "../utils/TemplateUtils.js";
+import EmailService from "./EmailService.js";
 import fs from 'fs';
 import path from 'path';
 
@@ -9,37 +9,39 @@ const emailService = new EmailService();
 
 export default class NotificationService {
     static async notifyUsersNotFinished() {
-        const usersToNotificate = repository.findUserToNotificateByStatus([
+        const usersToNotificate = await repository.findUserToNotificateByStatus([
             'PENDENTE', 
             'BLOQUEADO', 
             'EM_ANDAMENTO'
         ]);
 
-        this.notify(usersToNotificate, 'TarefaPendenteTemplate.html');
+        this.notify(usersToNotificate, 'email-meta-expirando.html');
     }
 
     static async notifyUsersExpired() {
-        const usersToNotificate = repository.findUserToNotificateByStatus([
+        const usersToNotificate = await repository.findUserToNotificateByStatus([
             'EXPIRADO'
         ]);
 
-        this.notify(usersToNotificate, 'TarefaPendenteTemplate.html');
+        this.notify(usersToNotificate, 'email-meta-expirada.html');
 
         usersToNotificate.forEach(user => {
-            repository.markUserExpiredMetasAsNotified(user.id);
+            repository.markUserExpiredMetasAsNotified(user.usuario_id);
         });
     }
 
     static notify(usersToNotificate, template) {
         if (!usersToNotificate) return;
 
-        let emailsToNotificate = ObjectUtils.getEmailsFromUsers(usersToNotificate);
+        const __dirname = path.resolve();
+        const templatePath = path.join(__dirname, 'assets', 'templates', template);
+        const originalHtmlTemplate = fs.readFileSync(templatePath, 'utf-8');
 
-        emailsToNotificate.forEach(email => {
-            const __dirname = path.resolve();
+        usersToNotificate.forEach(user => {
+            let email = user.email;
 
-            const templatePath = path.join(__dirname, 'assets', 'templates', template);
-            const htmlTemplate = fs.readFileSync(templatePath, 'utf-8');
+            const userTemplateData = TemplateUtils.buildTemplateData(user);
+            const htmlTemplate = TemplateUtils.preencherTemplate(originalHtmlTemplate, userTemplateData);
 
             emailService.sendMail(
                 email,
