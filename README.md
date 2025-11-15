@@ -14,7 +14,6 @@ Serviço de notificações automatizadas para o sistema TaskHero. Este microsser
 - [Estrutura do Projeto](#estrutura-do-projeto)
 - [Cronograma de Tarefas](#cronograma-de-tarefas)
 - [Templates de E-mail](#templates-de-e-mail)
-- [Testes](#testes)
 
 ## 🎯 Sobre o Projeto
 
@@ -41,7 +40,6 @@ O **Notificator TaskHero** é um serviço de notificações que trabalha em conj
 - **PostgreSQL** - Banco de dados
 - **Nodemailer** - Envio de e-mails
 - **Node-Cron** - Agendamento de tarefas
-- **Jest** - Framework de testes
 - **Nodemon** - Hot reload durante desenvolvimento
 - **dotenv** - Gerenciamento de variáveis de ambiente
 
@@ -180,16 +178,6 @@ Enviado para usuários com metas que já expiraram.
 
 Os templates suportam variáveis dinâmicas que são preenchidas automaticamente com dados do usuário e suas metas.
 
-## 🧪 Testes
-
-Para executar os testes:
-
-```bash
-npm test
-```
-
-Os testes são executados com Jest em modo experimental de módulos ES.
-
 ## 🔒 Segurança
 
 - ⚠️ **Nunca** commite o arquivo `.env` com suas credenciais
@@ -204,14 +192,6 @@ O serviço registra logs no console para:
 - Envio de e-mails (sucesso/erro)
 - Execução dos cron jobs
 - Erros de conexão
-
-## 🤝 Contribuindo
-
-1. Fork o projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/NovaFuncionalidade`)
-3. Commit suas mudanças (`git commit -m 'Adiciona nova funcionalidade'`)
-4. Push para a branch (`git push origin feature/NovaFuncionalidade`)
-5. Abra um Pull Request
 
 ## 📄 Licença
 
