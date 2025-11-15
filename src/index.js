@@ -1,5 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import './schedules/NotificationSchedule.js'
 // import routes from "./controller/TesteController.js";
 
 dotenv.config();

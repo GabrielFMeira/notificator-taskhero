@@ -4,11 +4,9 @@ import EmailService from "./EmailService.js";
 import fs from 'fs';
 import path from 'path';
 
-const repository = new UserRepository();
-const emailService = new EmailService();
-
 export default class NotificationService {
     static async notifyUsersNotFinished() {
+        const repository = new UserRepository();
         const usersToNotificate = await repository.findUserToNotificateByStatus([
             'PENDENTE', 
             'BLOQUEADO', 
@@ -19,6 +17,7 @@ export default class NotificationService {
     }
 
     static async notifyUsersExpired() {
+        const repository = new UserRepository();
         const usersToNotificate = await repository.findUserToNotificateByStatus([
             'EXPIRADO'
         ]);
@@ -31,6 +30,7 @@ export default class NotificationService {
     }
 
     static notify(usersToNotificate, template) {
+        const emailService = new EmailService();
         if (!usersToNotificate) return;
 
         const __dirname = path.resolve();
